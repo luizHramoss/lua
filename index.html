@@ -12,275 +12,287 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body>
-    <div class="full-height-wrapper">
-        <div class="sidebar bg-dark">
-            <h2 class="mb-4">🌙 Lua</h2>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a class="nav-link text-white" href="#"
-                        onclick="showSection('home')">Início</a></li>
-                <li class="nav-item mb-2"><a class="nav-link text-white" href="#"
-                        onclick="showSection('poems')">Poemas</a></li>
-                <li class="nav-item mb-2"><a class="nav-link text-white" href="#"
-                        onclick="showSection('gallery')">Galeria</a></li>
-            </ul>
+<header class="top-menu">
+    <div class="menu-container">
+        <span class="logo">🌙 Lua</span>
+    </div>
+    <nav id="menu" class="menu-links">
+        <a href="#" onclick="showSection('home')">Início</a>
+        <a href="#" onclick="showSection('poems')">Poemas</a>
+        <a href="#" onclick="showSection('gallery')">Mensagem</a>
+    </nav>
+</header>
+<div class="main-wrapper">
+
+    <body>
+
+        <div class="full-height-wrapper text-center">
+            <div class=" p-4">
+                <section id="home" class="section text-center">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h1 class="m-0">Feliz Aniversário!</h1>
+                        <div>
+                            <button class="btn btn-outline-primary me-2" onclick="togglePlay('audio-home', this)">⏯️
+                                Pausar</button>
+                            <button class="btn btn-outline-primary" onclick="toggleMute('audio-home', this)">🔊
+                                Som</button>
+                        </div>
+                    </div>
+                    <audio id="audio-home" autoplay loop>
+                        <source src="assets/music/do-i-wanna-know.mp3" type="audio/mpeg">
+                        Seu navegador não suporta áudio.
+                    </audio>
+                    <h2 class="mb-4">It's about you</h2>
+                    <div class="postit-board d-flex flex-wrap justify-content-center">
+                        <div class="postit" style="transform: rotate(-4deg);">
+                            <p class="caption-postit">Hoje foi bom te encontrar</p>
+                            <p class="caption-postit">Agora ta tudo bem🎶</p>
+                        </div>
+
+                        <div class="postit polaroid-postit" style="transform: rotate(3deg);">
+                            <img src="assets/img/lua-vestido.jpg" alt="Momentos" class="img-fluid">
+                            <small class="caption-postit">A mais bela princesa ✨</small>
+                        </div>
+
+                        <div class="postit" style="transform: rotate(2deg);">
+                            <p class="caption-postit">A lua que ilumina minhas noites 🌙</p>
+                        </div>
+
+                        <div class="postit polaroid-postit" style="transform: rotate(3deg);">
+                            <img src="assets/img/lua-night.jpg" alt="Momentos" class="img-fluid">
+                            <small class="caption-postit">Assim como a lua, você sempre será a visão mais linda de todas
+                                ✨</small>
+                        </div>
+
+                        <div class="postit" style="transform: rotate(2deg);">
+                            <p class="caption-postit">La pire des bénédictions</p>
+                            <p class="caption-postit">La plus belle des malédictions🎶</p>
+                        </div>
+
+                        <div class="postit polaroid-postit" style="transform: rotate(-5deg);">
+                            <img src="assets/img/lua-rj.jpg" alt="Lembrança" class="img-fluid">
+                            <small class="caption-postit">Nenhum paraíso nesse mundo chega próximo de você e sua beleza
+                                ❤️‍🔥</small>
+                        </div>
+                    </div>
+                    <div
+                        class="mt-5 d-flex flex-wrap justify-content-center align-items-start gap-4 extra-message-section">
+                        <div class="polaroid-postit polaroid-large">
+                            <img src="assets/img/lua-mar.jpg" alt="Lua Especial" class="img-fluid">
+                            <small class="caption-postit">A melhor pessoa que já passou e tem escolhido ficar pela minha
+                                vida 💖</small>
+                        </div>
+
+                        <div class="text-box">
+                            <p>Peço desculpas de antemão caso algo não fique legal, eu ainda estou aprendendo a lidar
+                                com as
+                                palavras.</p>
+                            <p>Eu fiquei anos longe e sem ser alguém na sua vida, foram anos que em momento algum eu
+                                consegui para de pensar em você. Me pegava olhando a lua e pensando se você ainda
+                                pensava em
+                                mim ou sentia alguma saudade e isso leva a um poema que conheci em <a
+                                    href="https://vm.tiktok.com/ZMBVrp5Rd/" target="_blank">2023</a>.</p>
+                            <p>Quando Joji lançou aquela fatídica música, ao escutar e ler a letra tudo dela me levava a
+                                você...</p>
+                            <p>Eu te amo das suas partes mais lindas e seus dias mais arrumadas às suas partes mais
+                                feias e
+                                seus dias mais acabados... Você não está mais sozinha, mesmo que você ainda ache isso.
+                            </p>
+                            <p>Você extrai o melhor de mim e eu tento todo santo dia ser melhor de alguma forma para
+                                manter
+                                você aqui e que você queira ficar...</p>
+                            <ul class="list-unstyled mt-3">
+                                <li><strong>Inteligente</strong></li>
+                                <li><strong>Linda</strong></li>
+                                <li><strong>Gostosa</strong></li>
+                                <li><strong>Sensível</strong></li>
+                                <li><strong>Sentimental</strong></li>
+                                <li><strong>Difícil de se lidar</strong></li>
+                                <li><strong>Um universo para ser explorado</strong></li>
+                            </ul>
+                            <p>Você é perfeita, eu te amo Lua ❤️, vamos aproveitar <strong>o SEU dia!!! ❤</strong></p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="poems" class="section d-none">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="m-0">📝 Poemas</h2>
+                        <div class="mt-3">
+                            <button class="btn btn-outline-primary me-2" onclick="togglePlay('audio-poems', this)">⏯️
+                                Pausar</button>
+                            <button class="btn btn-outline-primary" onclick="toggleMute('audio-poems', this)">🔊
+                                Som</button>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center g-4">
+                        <div class="col-md-4 fade-in">
+                            <div class="card p-4 postit-red poem-card h-100">
+                                <h5>🤍 "Amar você" – Angelo Gabriel</h5>
+                                <div class="poem" style="max-height: 400px; overflow-y: auto;">
+                                    <p>Tu é a cerveja no fim do meu dia</p>
+                                    <p>O gol no fim da minha partida</p>
+                                    <p>O caldo de cana na praia</p>
+                                    <p>E o sol no meu fim de semana</p> <br>
+                                    <p>Tu é a chuva de madrugada</p>
+                                    <p>O vento que limpa a água</p>
+                                    <p>O samba preenchendo a rua</p>
+                                    <p>As letras da minha escrita</p> <br>
+                                    <p>Tu é o gosto bom na minha boca</p>
+                                    <p>O lado frio do meu travesseiro</p>
+                                    <p>A picância do meu tempero</p>
+                                    <p>E o prazer de tirar a roupa</p> <br>
+                                    <p>Tu é meu beijo de bom dia</p>
+                                    <p>Meu doce depois da comida</p>
+                                    <p>Meu abraço pra celebrar</p>
+                                    <p>Meu colo pra consolar</p> <br>
+                                    <p>Tu é meu direito de ser criança</p>
+                                    <p>E fazer castelos na areia</p>
+                                    <p>E mergulhar de cabeça no raso</p>
+                                    <p>E ser com afeto abraçado</p> <br>
+                                    <p>Mas tu é muito mais que tudo isso</p>
+                                    <p>Muito mais que qualquer figura poética</p>
+                                    <p>Muito mais que qualquer metáfora</p>
+                                    <p>Que qualquer jogo de significados com fim artístico</p>
+                                    <p>Desses que são cheios os poemas dos poetas</p> <br>
+                                    <p>Tu é o <strong>AMOR</strong></p>
+                                    <p>Seja lá o que essa palavra signifique</p>
+                                    <p>Afinal já vi tanta gente significar diferente</p>
+                                    <p>Mas não tenho dúvidas de que é amor</p> <br>
+                                    <p>Além disso</p>
+                                    <p>Tu também é conforto</p>
+                                    <p>Carinho</p>
+                                    <p>Chamego</p>
+                                    <p>É uma conversa longa</p>
+                                    <p>Uma piada boba</p>
+                                    <p>O silêncio quando ele é bom e tranquilo</p> <br>
+                                    <p>Tu é entre tantas coisas</p>
+                                    <p>Muitas que preciso</p>
+                                    <p>Mas não te amo por te precisar</p>
+                                    <p>Isso é coisa de quem não sabe amar</p> <br>
+                                    <p>Amo porque te quero</p>
+                                    <p>E quero cada dia mais</p>
+                                    <p>E justamente por tu ser o meu amanhecer</p>
+                                    <p>Que amanhã</p>
+                                    <p>Eu irei novamente</p>
+                                    <p>Amar você</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 fade-in">
+                            <div class="card p-4 postit-blue poem-card h-100">
+                                <h5>✨ "Aniversário" – Carlos Drummond de Andrade</h5>
+                                <div class="poem">
+                                    <p>O tempo passa. Passa e voa.</p>
+                                    <p>A gente nem nota.</p>
+                                    <p>A idade chega.</p>
+                                    <p>Os cabelos embranquecem.</p>
+                                    <p>Mas enquanto houver sonho,</p>
+                                    <p>vontade de rir,</p>
+                                    <p>coragem para recomeçar</p>
+                                    <p>e amor no coração...</p>
+                                    <p>A vida continuará sendo</p>
+                                    <p>uma bela aventura!</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 fade-in">
+                            <div class="card p-4 postit-purple poem-card h-100">
+                                <h5>👑 “Phenomenal Woman” – Maya Angelou</h5>
+                                <div class="poem" style="max-height: 400px; overflow-y: auto;">
+                                    <p>Sou mulher fenomenal.</p>
+                                    <p>Isso mesmo, sou eu.</p>
+
+                                    <p>Não sou construída para caber</p>
+                                    <p>nas medidas de uma modelo de revista,</p>
+                                    <p>Mas quando começo a falar para os homens,</p>
+                                    <p>Todos se levantam ou</p>
+                                    <p>caem de joelhos.</p>
+                                    <br>
+                                    <p>Uma onda nos meus quadris,</p>
+                                    <p>Um raio no meu sorriso,</p>
+                                    <p>O jeito como meus pés se movem,</p>
+                                    <p>Sou mulher fenomenal.</p>
+                                    <br>
+                                    <p>Eu entro em um espaço</p>
+                                    <p>Tão calma quanto quiser</p>
+                                    <p>E para um homem,</p>
+                                    <p>Os outros se perguntam qual é o segredo.</p>
+                                    <br>
+                                    <p>Não é meu traje ou o formato do meu corpo —</p>
+                                    <p>É o fogo nos meus olhos,</p>
+                                    <p>O brilho no meu sorriso,</p>
+                                    <p>O arco das minhas costas,</p>
+                                    <p>O ritmo dos meus passos,</p>
+                                    <p>A alegria na minha alma,</p>
+                                    <p>O amor no meu coração.</p>
+                                    <br>
+                                    <p>Mulher fenomenal,</p>
+                                    <p>Essa sou eu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <audio id="audio-poems" autoplay loop>
+                        <source src="assets/music/like-you-do.mp3" type="audio/mpeg">
+                        Seu navegador não suporta áudio.
+                    </audio>
+                </section>
+
+                <section id="gallery" class="section d-none">
+                    <h2 class="">📸 Galeria de Fotos</h2>
+                    <div class="row g-4 justify-content-start" id="gallery-content">
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="polaroid small">
+                                <img src="assets/img/" alt="Foto de Aniversário" class="img-fluid">
+                                <p class="caption">💙</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="polaroid small">
+                                <video class="img-fluid" controls>
+                                    <source src="assets/video/luavideo.mp4" type="video/mp4">
+                                    Seu navegador não suporta vídeos.
+                                </video>
+                                <p class="caption">Única coisa nossa, por enquanto 💖</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="polaroid small polaroid-unrevealed" id="polaroidPhoto">
+                                <div class="polaroid-overlay">
+                                    <img src="assets/img/avolua.jpg" alt="Foto de Aniversário" class="img-fluid">
+                                    <p class="caption">Eu sei o quanto essa perda dói em você, mas eu tenho certeza de
+                                        qualquer lugar que ela esteja, ela está olhando para ti e está cheia de orgulho
+                                        da
+                                        mulher que você está se tornando 💙</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Repita para outras fotos -->
+
+
+                    </div>
+                </section>
+            </div>
+
         </div>
-        <div class=" p-4">
-            <section id="home" class="section text-center">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h1 class="m-0">Feliz Aniversário!</h1>
-                    <div>
-                        <button class="btn btn-outline-primary me-2" onclick="togglePlay('audio-home', this)">⏯️
-                            Pausar</button>
-                        <button class="btn btn-outline-primary" onclick="toggleMute('audio-home', this)">🔊 Som</button>
-                    </div>
-                </div>
-                <audio id="audio-home" autoplay loop>
-                    <source src="assets/music/do-i-wanna-know.mp3" type="audio/mpeg">
-                    Seu navegador não suporta áudio.
-                </audio>
-                <h2 class="mb-4">It's about you</h2>
-                <div class="postit-board d-flex flex-wrap justify-content-center">
-                    <div class="postit" style="transform: rotate(-4deg);">
-                        <p class="caption-postit">Hoje foi bom te encontrar</p>
-                        <p class="caption-postit">Agora ta tudo bem🎶</p>
-                    </div>
-
-                    <div class="postit polaroid-postit" style="transform: rotate(3deg);">
-                        <img src="assets/img/lua-vestido.jpg" alt="Momentos" class="img-fluid">
-                        <small class="caption-postit">A mais bela princesa ✨</small>
-                    </div>
-
-                    <div class="postit" style="transform: rotate(2deg);">
-                        <p class="caption-postit">A lua que ilumina minhas noites 🌙</p>
-                    </div>
-
-                    <div class="postit polaroid-postit" style="transform: rotate(3deg);">
-                        <img src="assets/img/lua-night.jpg" alt="Momentos" class="img-fluid">
-                        <small class="caption-postit">Assim como a lua, você sempre será a visão mais linda de todas ✨</small>
-                    </div>
-
-                    <div class="postit" style="transform: rotate(2deg);">
-                        <p class="caption-postit">La pire des bénédictions</p>
-                        <p class="caption-postit">La plus belle des malédictions🎶</p>
-                    </div>
-
-                    <div class="postit polaroid-postit" style="transform: rotate(-5deg);">
-                        <img src="assets/img/lua-rj.jpg" alt="Lembrança" class="img-fluid">
-                        <small class="caption-postit">Nenhum paraíso nesse mundo chega próximo de você e sua beleza
-                            ❤️‍🔥</small>
-                    </div>
-                </div>
-                <div class="mt-5 d-flex flex-wrap justify-content-center align-items-start gap-4 extra-message-section">
-                    <div class="polaroid-postit polaroid-large">
-                        <img src="assets/img/lua-mar.jpg" alt="Lua Especial" class="img-fluid">
-                        <small class="caption-postit">A melhor pessoa que já passou e tem escolhido ficar pela minha
-                            vida 💖</small>
-                    </div>
-
-                    <div class="text-box">
-                        <p>Peço desculpas de antemão caso algo não fique legal, eu ainda estou aprendendo a lidar com as
-                            palavras.</p>
-                        <p>Eu fiquei anos longe e sem ser alguém na sua vida, foram anos que em momento algum eu
-                            consegui para de pensar em você. Me pegava olhando a lua e pensando se você ainda pensava em
-                            mim ou sentia alguma saudade e isso leva a um poema que conheci em <a
-                                href="https://vm.tiktok.com/ZMBVrp5Rd/" target="_blank">2023</a>.</p>
-                        <p>Quando Joji lançou aquela fatídica música, ao escutar e ler a letra tudo dela me levava a
-                            você...</p>
-                        <p>Eu te amo das suas partes mais lindas e seus dias mais arrumadas às suas partes mais feias e
-                            seus dias mais acabados... Você não está mais sozinha, mesmo que você ainda ache isso.</p>
-                        <p>Você extrai o melhor de mim e eu tento todo santo dia ser melhor de alguma forma para manter
-                            você aqui e que você queira ficar...</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><strong>Inteligente</strong></li>
-                            <li><strong>Linda</strong></li>
-                            <li><strong>Gostosa</strong></li>
-                            <li><strong>Sensível</strong></li>
-                            <li><strong>Sentimental</strong></li>
-                            <li><strong>Difícil de se lidar</strong></li>
-                            <li><strong>Um universo para ser explorado</strong></li>
-                        </ul>
-                        <p>Você é perfeita, eu te amo Lua ❤️, vamos aproveitar <strong>o SEU dia!!! ❤</strong></p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="poems" class="section d-none">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h2 class="m-0">📝 Poemas</h2>
-                    <div class="mt-3">
-                        <button class="btn btn-outline-primary me-2" onclick="togglePlay('audio-poems', this)">⏯️
-                            Pausar</button>
-                        <button class="btn btn-outline-primary" onclick="toggleMute('audio-poems', this)">🔊
-                            Som</button>
-                    </div>
-                </div>
-
-                <div class="row justify-content-center g-4">
-                    <div class="col-md-4 fade-in">
-                        <div class="card p-4 postit-red poem-card h-100">
-                            <h5>🤍 "Amar você" – Angelo Gabriel</h5>
-                            <div class="poem" style="max-height: 400px; overflow-y: auto;">
-                                <p>Tu é a cerveja no fim do meu dia</p>
-                                <p>O gol no fim da minha partida</p>
-                                <p>O caldo de cana na praia</p>
-                                <p>E o sol no meu fim de semana</p> <br>
-                                <p>Tu é a chuva de madrugada</p>
-                                <p>O vento que limpa a água</p>
-                                <p>O samba preenchendo a rua</p>
-                                <p>As letras da minha escrita</p> <br>
-                                <p>Tu é o gosto bom na minha boca</p>
-                                <p>O lado frio do meu travesseiro</p>
-                                <p>A picância  do meu tempero</p>
-                                <p>E o prazer de tirar a roupa</p> <br>
-                                <p>Tu é meu beijo de bom dia</p>
-                                <p>Meu doce depois da comida</p>
-                                <p>Meu abraço pra celebrar</p>
-                                <p>Meu colo pra consolar</p> <br>
-                                <p>Tu é meu direito de ser criança</p>
-                                <p>E fazer castelos na areia</p>
-                                <p>E mergulhar de cabeça no raso</p>
-                                <p>E ser com afeto abraçado</p> <br>
-                                <p>Mas tu é muito mais que tudo isso</p>
-                                <p>Muito mais que qualquer figura poética</p>
-                                <p>Muito mais que qualquer metáfora</p>
-                                <p>Que qualquer jogo de significados com fim artístico</p>
-                                <p>Desses que são cheios os poemas dos poetas</p> <br>
-                                <p>Tu é o <strong>AMOR</strong></p>
-                                <p>Seja lá o que essa palavra signifique</p>
-                                <p>Afinal já vi tanta gente significar diferente</p>
-                                <p>Mas não tenho dúvidas de que é amor</p> <br>
-                                <p>Além disso</p>
-                                <p>Tu também é conforto</p>
-                                <p>Carinho</p>
-                                <p>Chamego</p>
-                                <p>É uma conversa longa</p>
-                                <p>Uma piada boba</p>
-                                <p>O silêncio quando ele é bom e tranquilo</p> <br>
-                                <p>Tu é entre tantas coisas</p>
-                                <p>Muitas que preciso</p>
-                                <p>Mas não te amo por te precisar</p>
-                                <p>Isso é coisa de quem não sabe amar</p> <br>
-                                <p>Amo porque te quero</p>
-                                <p>E quero cada dia mais</p>
-                                <p>E justamente por tu ser o meu amanhecer</p>
-                                <p>Que amanhã</p>
-                                <p>Eu irei novamente</p>
-                                <p>Amar você</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 fade-in">
-                        <div class="card p-4 postit-blue poem-card h-100">
-                            <h5>✨ "Aniversário" – Carlos Drummond de Andrade</h5>
-                            <div class="poem">
-                                <p>O tempo passa. Passa e voa.</p>
-                                <p>A gente nem nota.</p>
-                                <p>A idade chega.</p>
-                                <p>Os cabelos embranquecem.</p>
-                                <p>Mas enquanto houver sonho,</p>
-                                <p>vontade de rir,</p>
-                                <p>coragem para recomeçar</p>
-                                <p>e amor no coração...</p>
-                                <p>A vida continuará sendo</p>
-                                <p>uma bela aventura!</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 fade-in">
-                        <div class="card p-4 postit-purple poem-card h-100">
-                            <h5>👑 “Phenomenal Woman” – Maya Angelou</h5>
-                            <div class="poem" style="max-height: 400px; overflow-y: auto;">
-                                <p>Sou mulher fenomenal.</p>
-                                <p>Isso mesmo, sou eu.</p>
-
-                                <p>Não sou construída para caber</p>
-                                <p>nas medidas de uma modelo de revista,</p>
-                                <p>Mas quando começo a falar para os homens,</p>
-                                <p>Todos se levantam ou</p>
-                                <p>caem de joelhos.</p>
-                                <br>
-                                <p>Uma onda nos meus quadris,</p>
-                                <p>Um raio no meu sorriso,</p>
-                                <p>O jeito como meus pés se movem,</p>
-                                <p>Sou mulher fenomenal.</p>
-                                <br>
-                                <p>Eu entro em um espaço</p>
-                                <p>Tão calma quanto quiser</p>
-                                <p>E para um homem,</p>
-                                <p>Os outros se perguntam qual é o segredo.</p>
-                                <br>
-                                <p>Não é meu traje ou o formato do meu corpo —</p>
-                                <p>É o fogo nos meus olhos,</p>
-                                <p>O brilho no meu sorriso,</p>
-                                <p>O arco das minhas costas,</p>
-                                <p>O ritmo dos meus passos,</p>
-                                <p>A alegria na minha alma,</p>
-                                <p>O amor no meu coração.</p>
-                                <br>
-                                <p>Mulher fenomenal,</p>
-                                <p>Essa sou eu.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <audio id="audio-poems" autoplay loop>
-                    <source src="assets/music/like-you-do.mp3" type="audio/mpeg">
-                    Seu navegador não suporta áudio.
-                </audio>
-            </section>
-
-            <section id="gallery" class="section d-none">
-                <h2 class="">📸 Galeria de Fotos</h2>
-                <div class="row g-4 justify-content-start" id="gallery-content">
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="polaroid small">
-                            <img src="assets/img/" alt="Foto de Aniversário" class="img-fluid">
-                            <p class="caption">💙</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="polaroid small">
-                            <video class="img-fluid" controls>
-                                <source src="assets/video/luavideo.mp4" type="video/mp4">
-                                Seu navegador não suporta vídeos.
-                            </video>
-                            <p class="caption">Única coisa nossa, por enquanto 💖</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="polaroid small polaroid-unrevealed" id="polaroidPhoto">
-                            <div class="polaroid-overlay">
-                                <img src="assets/img/avolua.jpg" alt="Foto de Aniversário" class="img-fluid">
-                                <p class="caption">Eu sei o quanto essa perda dói em você, mas eu tenho certeza de
-                                    qualquer lugar que ela esteja, ela está olhando para ti e está cheia de orgulho da
-                                    mulher que você está se tornando 💙</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <!-- Repita para outras fotos -->
-
-
-                </div>
-            </section>
-        </div>
-
-    </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <div class="floating-hearts-container">
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+<div class="floating-hearts-container">
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+</div>
 </body>
+</div>
 
 </html>
