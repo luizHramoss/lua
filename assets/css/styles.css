@@ -2,6 +2,13 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     font-family: 'Quicksand', sans-serif;
+    padding-top: 100px;
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px; /* espaço pro menu fixo */
 }
 
 html,
@@ -16,18 +23,6 @@ body {
     display: flex;
     min-height: 100vh;
 }
-
-.sidebar {
-    background-color: #0d0d0d;
-    /* preto puro */
-    color: white;
-    padding: 1.5rem;
-    min-width: 220px;
-    height: 100vh;
-    position: sticky;
-    top: 0;
-}
-
 
 h1,
 h2 {
@@ -240,8 +235,10 @@ audio {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
     width: 100%;
-    height: auto; /* permite crescer conforme o conteúdo */
-    overflow-y: visible; /* deixa rolar tudo normalmente */
+    height: auto;
+    /* permite crescer conforme o conteúdo */
+    overflow-y: visible;
+    /* deixa rolar tudo normalmente */
 }
 
 .poem-card:hover {
@@ -251,8 +248,10 @@ audio {
 .poem {
     font-size: 1rem;
     line-height: 1.6;
-    max-height: none; /* remove qualquer limitação de altura */
-    overflow-y: visible; /* garante que o texto seja mostrado */
+    max-height: none;
+    /* remove qualquer limitação de altura */
+    overflow-y: visible;
+    /* garante que o texto seja mostrado */
 }
 
 @media (max-width: 768px) {
@@ -369,24 +368,79 @@ audio {
     pointer-events: none;
     overflow: hidden;
     z-index: 9999;
-  }
-  
-  .heart {
+}
+
+.heart {
     position: absolute;
     color: pink;
     font-size: 24px;
     animation: floatUp 4s ease-in forwards;
     opacity: 0;
-  }
-  
-  @keyframes floatUp {
+}
+
+@keyframes floatUp {
     0% {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
+
     100% {
-      transform: translateY(-200px);
-      opacity: 0;
+        transform: translateY(-200px);
+        opacity: 0;
     }
-  }
-  
+}
+
+.top-menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    z-index: 1000;
+    padding: 10px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.menu-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.menu-links a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #111;
+        padding-bottom: 10px;
+    }
+
+    .menu-links.show {
+        display: flex;
+    }
+}
