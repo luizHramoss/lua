@@ -8,7 +8,8 @@ body {
 .main-wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 80px; /* espaço pro menu fixo */
+    padding-top: 80px;
+    /* espaço pro menu fixo */
 }
 
 html,
@@ -322,35 +323,46 @@ audio {
     }
 }
 
+.polaroid:hover {
+    transform: scale(1.03) rotate(0deg);
+}
+
 .polaroid {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
-    padding: 8px 8px 16px;
-    text-align: center;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    transform: rotate(-1.5deg);
-    transition: transform 0.2s ease-in-out;
-    max-width: 400px;
-    margin: auto;
+    text-align: center;
+    width: 100%;
+    /* Faz com que ela ocupe toda a coluna atribuída no grid */
+    max-width: 100%;
+    /* Garante que não ultrapasse */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Caveat', cursive;
 }
 
 .polaroid:hover {
     transform: scale(1.03) rotate(0deg);
 }
 
-.polaroid img {
-    border-radius: 4px;
+.polaroid img,
+.polaroid video {
     width: 100%;
     height: auto;
-    margin-bottom: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    object-fit: cover;
 }
 
-.caption {
-    font-family: 'Dancing Script', cursive;
+.polaroid .caption {
+    font-size: 0.95rem;
     color: #333;
-    font-size: 1.5rem;
-    margin-top: -6px;
+    margin-top: auto;
+    padding: 5px 10px;
 }
 
 @media (max-width: 576px) {
