@@ -63,3 +63,7 @@ function createHeart() {
 }
 
 setInterval(createHeart, 500);
+
+function toggleMenu() {
+    document.getElementById("menu").classList.toggle("show");
+  }
