@@ -240,9 +240,8 @@ audio {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
     width: 100%;
-    min-height: 450px; /* aumenta a altura mínima */
-    padding: 1.5rem;    /* dá mais "respiro" ao conteúdo */
-    font-size: 1.1rem;  /* texto um pouco maior */
+    height: auto; /* permite crescer conforme o conteúdo */
+    overflow-y: visible; /* deixa rolar tudo normalmente */
 }
 
 .poem-card:hover {
@@ -252,6 +251,15 @@ audio {
 .poem {
     font-size: 1rem;
     line-height: 1.6;
+    max-height: none; /* remove qualquer limitação de altura */
+    overflow-y: visible; /* garante que o texto seja mostrado */
+}
+
+@media (max-width: 768px) {
+    .poem-card {
+        max-height: 400px;
+        overflow-y: auto;
+    }
 }
 
 .postit-red {
