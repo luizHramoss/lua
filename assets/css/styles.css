@@ -95,13 +95,6 @@ audio {
     margin-bottom: 2rem;
 }
 
-.caption-postit {
-    font-family: 'Dancing Script', cursive;
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin-top: -6px;
-}
-
 .polaroid-postit {
     background: white;
     padding: 0.5rem;
@@ -158,14 +151,6 @@ audio {
 .text-box {
     max-width: 600px;
     animation: fadeInText 2.3s ease-in-out;
-}
-
-.caption-postit {
-    font-style: italic;
-    text-align: center;
-    display: block;
-    margin-top: 0.5rem;
-    color: #f8d1e0;
 }
 
 @keyframes fadeInMain {
@@ -236,7 +221,24 @@ audio {
     line-height: 1.6;
     max-height: none;
     overflow-y: visible;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    padding-right: 8px;
 }
+
+.poem::-webkit-scrollbar {
+    width: 6px;
+}
+
+.poem::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.poem::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
 
 @media (max-width: 768px) {
     .poem-card {
@@ -257,6 +259,21 @@ audio {
 
 .postit-purple {
     background-color: #ac2fff;
+    color: #ffffff !important;
+}
+
+.postit-yellow {
+    background-color: #ffbe2f;
+    color: #000000 !important;
+}
+
+.postit-green {
+    background-color: #2fff8a;
+    color: #000000 !important;
+}
+
+.postit-orange {
+    background-color: #ff6b2f;
     color: #ffffff !important;
 }
 
